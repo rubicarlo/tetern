@@ -3,7 +3,8 @@ import subprocess
 processes = []
 
 def download_video(url, index):
-    process = subprocess.Popen(['ffmpeg', '-loglevel', 'panic', '-i', url, f'video_{index}.mp4'])
+    process = subprocess.Popen(['ffmpeg', '-loglevel', 'panic', '-i', url, '-b:v', '2M', f'video_{index}.ts'])
+
     processes.append(process)
 
 def stop_download(index):
