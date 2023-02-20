@@ -18,5 +18,3 @@ while True:
         funciones.stop_download(index)
     else:
         print("Opción no válida")
-
-
